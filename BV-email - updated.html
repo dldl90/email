@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+  <title>Darling, review your recent purchase!</title>
+
+  <style type="text/css" id="internalStyle">
+    body {
+      margin: 0;
+      width: 100%;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
+
+    /* Generic styles */
+    table {
+      border-spacing: 0;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .link {
+      color: #340C0C;
+    }
+
+    /* Font styles */
+    .type-body {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      line-height: 18px;
+      color: #340c0c;
+    }
+
+    .type-body--regular {
+      font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .type-body--small {
+      /* body small dark light center */
+      font-size: 12px;
+    }
+
+    .type-body--medium {
+      font-size: 16px;
+    }
+
+    .type-body--small-regular {
+      /* body small dark regular cente */
+      font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.34px;
+      /* Intentionally different to type-body? */
+    }
+
+    .type-title {
+      /* H1 dark center */
+      font-family: "Helvetica Neue Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .type-title--medium {
+      /* H2 dark center */
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.46px;
+    }
+
+    .type-title--medium-regular {
+      /* H4 */
+      font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.4px;
+    }
+
+    .type-navigation {
+      font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    /* CONTAINER STYLES */
+    .Email__container {
+      background: #ffffff;
+      padding: 0 1.25rem;
+      max-width: 640px;
+      border-top: #340c0d solid 6px;
+    }
+
+    /* Causes elements to ignore .Email__container padding */
+    .full-width {
+      width: calc(100% + 2.5rem);
+      position: relative;
+      left: -1.25rem;
+    }
+
+    /* HEADER */
+    .Header__image-wrapper {
+      padding: 1.25rem 0 1rem;
+      text-align: center;
+    }
+
+    .Header__image {
+      width: 160px;
+    }
+
+    .Header__nav {
+      display: none;
+      padding-bottom: 1rem;
+      text-align: center;
+    }
+
+    .Header__nav-item {
+      padding: 0 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      color: #340C0C;
+    }
+
+    .Header__nav-item:first-child {
+      padding-left: 0;
+    }
+
+    .Header__nav-item:last-child {
+      padding-right: 0;
+    }
+
+    /* IMAGE BANNER */
+    .ImageBanner__image {
+      width: 100%;
+      display: block;
+    }
+
+    /* INTRO */
+    .Intro {
+      padding: 2.5rem 1.4rem
+    }
+
+    .Intro__greeting {
+      padding-bottom: 0.5rem;
+    }
+
+    .Intro__copy {
+      padding-bottom: 0.25em;
+    }
+
+    .Intro__team {
+      padding-top: 0.75rem;
+    }
+
+    .Intro__team-copy {
+      padding-bottom: 2rem;
+    }
+
+    /* HERO */
+    .Hero {
+      padding-bottom: 2.5rem;
+    }
+
+    .Hero__wrapper {
+      position: relative;
+      height: 0;
+      padding-top: calc((1 / 2) * 100%);
+    }
+
+    .Hero__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+    }
+
+    /* TWO COLUMN */
+    .TwoColumn {
+      padding: 1.75rem 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .TwoColumn__column {
+      width: 100%;
+      display: block;
+    }
+
+    .TwoColumn__title {
+      padding-bottom: 1rem;
+    }
+
+    .TwoColumn__text {
+      line-height: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    /* TAG YOUR TILBURY */
+    .TagYourTilbury {
+      background: #ffffff;
+    }
+
+    .TagYourTilbury__details-container {
+      width: 100%;
+    }
+
+    .TagYourTilbury__image-container {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .TagYourTilbury__link {
+      text-decoration: none;
+    }
+
+    .TagYourTilbury__tag {
+      padding: 0.5rem 0;
+    }
+
+    /* PRODUCTS */
+    .Products {
+      background: #F5F3F3;
+      padding: 0 1.25rem;
+    }
+
+    .Products--purchased {
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .Products--free {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+    }
+
+    .Products__spacer-row {
+      height: 0.75rem;
+    }
+
+    .Products__title {
+      padding-bottom: 1.5rem;
+    }
+
+    .Product {
+      background: #ffffff;
+      padding: 1.5rem 0;
+    }
+
+    .Product__title {
+      padding-bottom: 0.25rem;
+    }
+
+    .Product__subtitle,
+    .Product__title {
+      text-transform: uppercase;
+    }
+
+    .Product__column-image {
+      padding: 0 0.5rem 0 0;
+      width: 100px;
+    }
+
+    .Product__column-image--review-padding {
+      padding-bottom: 3.25rem;
+    }
+
+    .Product__column-info {
+      padding: 0 1rem 0 0.5rem;
+    }
+
+    .Product__image {
+      width: 100%;
+      max-width: 128px;
+    }
+
+    .Product__image-sample {
+      max-width: 96px;
+    }
+
+    .Product__quantity {
+      padding-top: 0.75rem;
+    }
+
+    .Product__message {
+      padding-top: 0.25rem;
+      padding-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    .Product__column-desktop-price {
+      display: none;
+      text-align: right;
+    }
+
+    .Product__price-content {
+      text-align: right;
+    }
+
+    .Product__price-sale {
+      padding-right: 0.5rem;
+    }
+
+    .Product__review {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 58px;
+    }
+
+    .Product__review-image {
+      display: block;
+      position: relative;
+      padding-top: 15px;
+    }
+
+    .Product__review-button {
+      padding: 10px 42px;
+      width: 100%;
+      display: block;
+      background: #340c0d;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: -92px;
+    }
+
+    /* FOOTER NAV */
+    .FooterNav {
+      padding: 2.5rem 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .FooterNav__item {
+      padding-top: 1.75rem;
+    }
+
+    .FooterNav__item a {
+      text-decoration: none;
+      color: #340C0C;
+    }
+
+    .FooterNav tr:first-child .FooterNav__item {
+      padding: 0;
+    }
+
+    /* FOOTER */
+    .Footer {
+      text-align: center;
+      background: #F5F3F3;
+      padding: 2.5rem 0 3.25rem;
+    }
+
+    .Footer__content {
+      padding-top: 1.5rem;
+    }
+
+    /* DESKTOP styles */
+    @media screen and (min-width: 640px) {
+      .Email__container {
+        padding: 0 2.5rem;
+      }
+
+      .full-width {
+        width: calc(100% + 5rem);
+        position: relative;
+        left: -2.5rem;
+      }
+
+      .Header__image-wrapper {
+        padding-bottom: 0.75rem;
+        text-align: center;
+      }
+
+      .Header__image {
+        width: 200px;
+      }
+
+      .Header__nav {
+        display: table;
+      }
+
+      .Header__nav-column {
+        padding: 0;
+      }
+
+      .Intro {
+        padding: 2.5rem;
+      }
+
+      .TwoColumn {
+        padding: 2.5rem 0 2.75rem;
+      }
+
+      .TwoColumn__column {
+        display: inline-block;
+      }
+
+      .TagYourTilbury__details-container {
+        max-width: 336px;
+      }
+
+      .TagYourTilbury__image-container {
+        max-width: 224px;
+        margin-top: 0;
+      }
+
+      .Products {
+        padding: 0 2.5rem 2.5rem;
+      }
+
+      .Products--purchased {
+        padding-top: 2rem;
+        padding-bottom: 1.25rem;
+      }
+
+      .Products--free {
+        padding-top: 1.25rem;
+      }
+
+      .Products__title--purchased {
+        padding-bottom: 1.75rem;
+      }
+
+      .Product {
+        padding: 1.5rem 3rem 1.5rem 0;
+      }
+
+      .Product__column-image {
+        padding: 0 1.25rem 0 0;
+        width: 128px;
+      }
+
+      .Product__column-image--review-padding {
+        padding-bottom: 0;
+      }
+
+      .Product__column-info {
+        padding: 0 0 0 1.25rem;
+        width: 70%;
+      }
+
+      .Product__quantity {
+        padding-top: 1rem;
+      }
+
+      .Product__column-desktop-price {
+        display: table-cell;
+        position: relative;
+      }
+
+      .Product__price-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .Product__price-content {
+        display: none;
+      }
+
+      .Product__review {
+        height: 38px;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      .Product__review-image {
+        padding-top: 5px;
+      }
+
+      .Product__review-button {
+        padding: 10px 30px;
+        display: inline-block;
+        top: 0;
+        right: -20px;
+        bottom: unset;
+        left: unset;
+        width: auto;
+        top: 0;
+      }
+
+      .FooterNav {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="type-body">
+  <table class="Email__container" role="presentation" align="center">
+
+    <!-- Header -->
+    <tr>
+      <td>
+        <table class="Header" role="presentation">
+          <tr>
+            <td class="Header__image-wrapper">
+              <img src="https://www.charlottetilbury.com/uk/skin/frontend/charlottetilbury/mobile/images/CT-logo.svg"
+                alt="" class="Header__image" />
+            </td>
+          </tr>
+          <tr>
+            <td class="Header__nav-column">
+              <table class="Header__nav type-navigation" role="presentation">
+                <tr>
+                  <td>
+                    <a class="Header__nav-item" href='https://www.charlottetilbury.com/uk/products/makeup/new'
+                      title="New in">new in</a>
+                    <a class="Header__nav-item" href='https://www.charlottetilbury.com/uk/products/skin-care'
+                      title="Skincare">skincare</a>
+                    <a class="Header__nav-item" href='https://www.charlottetilbury.com/uk/products/makeup'
+                      title="Makeup">makeup</a>
+                    <a class="Header__nav-item"
+                      href='https://www.charlottetilbury.com/uk/products/magical-beauty-savings'
+                      title="Magical savings">magical savings</a>
+                    <a class="Header__nav-item" href='https://www.charlottetilbury.com/uk/products/makeup/best-sellers'
+                      title="Bestsellers">bestsellers</a>
+                    <a class="Header__nav-item"
+                      href='https://www.charlottetilbury.com/uk/content/luxury-beauty-gift-ideas'
+                      title="gifts">gifts</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- /Header -->
+
+    <!-- Image Banner -->
+    <tr>
+      <td>
+        <table class="ImageBanner full-width" role="presentation">
+          <td class="ImageBanner__td">
+            <img src="https://www.charlottetilbury.com/images/emails/thin-banner-v1.jpg" alt=""
+              class="ImageBanner__image" />
+          </td>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Intro -->
+    <tr>
+      <td>
+        <table class="Intro full-width" role="presentation">
+          <tr>
+            <td align="center">
+              <p class="Intro__greeting type-title">Darling {--Customer--},</p>
+              <p class="Intro__copy">I'd love to hear your thoughts about your recent order!</p>
+              <p class="Intro__copy">Please leave a review for your items below</p>
+            </td>
+          </tr>
+          <tr align="center">
+            <td class="Intro__team">
+              <p class="Intro__team-name">Team Tilbury x</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Hero -->
+    <tr>
+      <td>
+        <table class="Hero" role="presentation">
+          <td class="Hero__wrapper">
+            <img src="https://www.charlottetilbury.com/images/emails/hero-v1.jpg"
+              alt="Charlotte Tilbury and models putting on lipstick" class="Hero__image" />
+          </td>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Products - purchased -->
+
+    <tr>
+      <td>
+        <table class="Products Products--purchased full-width" role="presentation">
+          <tr>
+            <td>
+              <h2 class="Products__title Products__title--purchased type-title">Your items</h2>
+            </td>
+          </tr>
+
+          <!-- --------------------  ADDED REVIEW SECTION  -------------------- -->
+          <tr>
+            <td>
+              <table class="Product" role="presentation">
+                <tr>
+                  <td class="Product__column-image Product__column-image--review-padding">
+                    <img
+                      src="https://images.ctfassets.net/wlke2cbybljx/1OTCC6hxfNZY4TSreQsrxD/c9040895ed51afc479fe0e7cc19967e5/Holiday2019-LegendaryEyes.png?w=500&h=500&fit=fill&fm=webp&bg=rgb%3Affffff"
+                      alt="Product title - product subtitle" class="Product__image" />
+                  </td>
+
+                  <td>
+                    <table class="Product__content-wrapper">
+                      <tr>
+                        <td class="Product__column-info">
+                          <h3 class="Product__title type-title--medium-regular">legendary eyes</h3>
+                          <p class="Product__subtitle">Eyeliner & Mascara Set</p>
+                          <a class="Product__review" href="#">
+                            <img class="Product__review-image" alt="star rating icon"
+                              src="https://via.placeholder.com/150x30" />
+                            <span class="Product__review-button">Write review</span>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="Products__spacer-row"></td>
+          </tr>
+          <!-- --------------------  END: ADDED REVIEW SECTION  -------------------- -->
+          <tr>
+            <td>
+              <table class="Product" role="presentation">
+                <tr>
+                  <td class="Product__column-image">
+                    <img
+                      src="https://images.ctfassets.net/wlke2cbybljx/1OTCC6hxfNZY4TSreQsrxD/c9040895ed51afc479fe0e7cc19967e5/Holiday2019-LegendaryEyes.png?w=500&h=500&fit=fill&fm=webp&bg=rgb%3Affffff"
+                      alt="Product title - product subtitle" class="Product__image" />
+                  </td>
+
+                  <td>
+                    <table class="Product__content-wrapper">
+                      <tr>
+                        <td class="Product__column-info">
+                          <h3 class="Product__title type-title--medium-regular">legendary eyes
+                          </h3>
+                          <p class="Product__subtitle">Eyeliner & Mascara Set</p>
+                          <p class="Product__quantity type-body--small-regular">Quantity: 1
+                          </p>
+                          <p class="Product__price-content type-body--regular">
+                            <span class="Product__price-sale type-strikethrough-price">£60.00</span>
+                            £50.00
+                          </p>
+                        </td>
+
+                        <td class="Product__column-desktop-price type-body--regular">
+                          <div class="Product__price-wrapper">
+                            <p>£50.00</p>
+                            <p class="type-strikethrough-price">£60.00</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="Products__spacer-row"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <table class='Product' role="presentation">
+                <tr>
+                  <td class="Product__column-image">
+                    <img
+                      src="https://images.ctfassets.net/wlke2cbybljx/1OTCC6hxfNZY4TSreQsrxD/c9040895ed51afc479fe0e7cc19967e5/Holiday2019-LegendaryEyes.png?w=500&h=500&fit=fill&fm=webp&bg=rgb%3Affffff"
+                      alt="product title - product subtitle" class="Product__image" />
+                  </td>
+                  <td>
+                    <table class="Product__content-wrapper">
+                      <tr>
+                        <td class="Product__column-info">
+                          <h3 class="Product__title type-title--medium-regular">Product title
+                          </h3>
+                          <p class="Product__subtitle">Product description</p>
+                          <p class="Product__quantity type-body--small-regular">Quantity: 1
+                          </p>
+                          <p class="Product__price-content type-body--regular">£50.00</p>
+                        </td>
+                        <td class="Product__column-desktop-price type-body--regular">
+                          <div class="Product__price-wrapper">
+                            <p>£50.00</p>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="Products__spacer-row"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Products - samples: will use the products table above -->
+    <tr>
+      <td>
+        <table class="Products Products--free full-width" role="presentation">
+          <tr>
+            <td>
+              <h2 class="Products__title type-title">Free gifts and samples</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="Product" role="presentation">
+                <tr>
+                  <td class="Product__column-image">
+                    <img
+                      src="https://images.ctfassets.net/wlke2cbybljx/1OTCC6hxfNZY4TSreQsrxD/c9040895ed51afc479fe0e7cc19967e5/Holiday2019-LegendaryEyes.png?w=500&h=500&fit=fill&fm=webp&bg=rgb%3Affffff"
+                      alt="Product title - product subtitle" class="Product__image" />
+                  </td>
+                  <td class="Product__column-info">
+                    <h3 class="Product__title type-title--medium-regular">legendary eyes</h3>
+                    <p class="Product__subtitle">Eyeliner & Mascara Set</p>
+                    <p class="Product__quantity type-body--small-regular">Quantity: 1</p>
+                    <p class="Product__price-content type-body--regular">
+                      <span class="Product__price-sale type-strikethrough-price">£60.00</span>
+                      £50.00
+                    </p>
+                  </td>
+                  <td class="Product__column-desktop-price type-body--regular">
+                    <div class="Product__price-wrapper">
+                      <p>£50.00</p>
+                      <p class="type-strikethrough-price">£60.00</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="Products__spacer-row"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class='Product' role="presentation">
+                <tr>
+                  <td class="Product__column-image">
+                    <img
+                      src="https://images.ctfassets.net/wlke2cbybljx/1OTCC6hxfNZY4TSreQsrxD/c9040895ed51afc479fe0e7cc19967e5/Holiday2019-LegendaryEyes.png?w=500&h=500&fit=fill&fm=webp&bg=rgb%3Affffff"
+                      alt="product title - product subtitle" class="Product__image" />
+                  </td>
+                  <td class="Product__column-info">
+                    <h3 class="Product__title type-title--medium-regular">Product title</h3>
+                    <p class="Product__subtitle">Product description</p>
+                    <p class="Product__quantity type-body--small-regular">Quantity: 1</p>
+                    <p class="Product__price-content type-body--regular">£50.00</p>
+                  </td>
+                  <td class="Product__column-desktop-price type-body--regular">
+                    <div class="Product__price-wrapper">
+                      <p>£50.00</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="Products__spacer-row"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Tag Your Tilbury -->
+    <tr>
+      <td>
+        <table class="TagYourTilbury TwoColumn" role="presentation">
+          <tr valign="top">
+            <td class="TagYourTilbury__details-container TwoColumn__column">
+              <h2 class="TwoColumn__title type-title type-title--large">Tag Your Tilbury</h2>
+              <p class="TwoColumn__text type-body--medium">For a chance to feature on our website,<br />
+                upload your photos to
+                <a class="TagYourTilbury__link link" href="https://www.instagram.com/ctilburymakeup">Instagram</a>,
+                <a class="TagYourTilbury__link link" href="https://twitter.com/CTilburyMakeup">Twitter</a><br />
+                or CharlotteTilbury.com, using:</p>
+              <p class="TagYourTilbury__tag">@CTILBURYMAKEUP</p>
+              <p class="TagYourTilbury__tag"></a>#CHARLOTTETILBURY</p>
+            </td>
+            <td class="TagYourTilbury__image-container TwoColumn__column">
+              <img width="224" height="203" src="https://via.placeholder.com/224x203.jpg?text=Tag-Your-Tilbury"
+                alt="feature on our website" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Image Banner -->
+    <tr>
+      <td>
+        <table class="ImageBanner full-width" role="presentation">
+          <td class="ImageBanner__column">
+            <img src="https://www.charlottetilbury.com/images/emails/thin-banner-v1.jpg" alt=""
+              class="ImageBanner__image" />
+          </td>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Footer Nav -->
+    <tr>
+      <td>
+        <table class="FooterNav full-width type-title--medium-regular" role="presentation">
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/products/makeup/new'
+                title="New in">new in</a></td>
+          </tr>
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/products/skin-care'
+                title="Skincare">skincare</a></td>
+          </tr>
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/products/makeup'
+                title="Makeup">makeup</a></td>
+          </tr>
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/products/magical-beauty-savings'
+                title="Magical savings">magical savings</a></td>
+          </tr>
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/products/makeup/best-sellers'
+                title="Bestsellers">bestsellers</a></td>
+          </tr>
+          <tr>
+            <td class="FooterNav__item"><a href='https://www.charlottetilbury.com/uk/content/luxury-beauty-gift-ideas'
+                title="Gifts">gifts</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td>
+        <table class="Footer full-width type-body type-body--small" role="presentation">
+          <tr>
+            <td>
+              <img src="https://www.charlottetilbury.com/images/emails/signature-v1.png" alt="Charlotte Tilbury"
+                class="Footer__singature" />
+            </td>
+          </tr>
+          <tr>
+            <td class="Footer__content">
+              <p>© Charlotte Tilbury Beauty Limited. All rights reserved.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="Footer__content">
+              <p>8 Surrey Street, London United Kingdom, WC2R 2ND</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="Footer__content">
+              <p>Company Number 08037372 | VAT number: GB 144 0736 30</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="Footer__content">
+              <p>customercare@charlottetilbury.com</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- /Footer -->
+
+  </table>
+</body>
+
+</html>
